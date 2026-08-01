@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f2f2f2;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+            width: 320px;
+        }
+
+        #dice {
+            font-size: 90px;
+            margin: 20px 0;
+        }
+
+        #number {
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Dice Roller</h1>
+
+        <div id="dice">🎲</div>
+
+        <div id="number">0</div>
+
+        <button id="rollBtn">Roll Dice</button>
+
+    </div>
+
+<script>
+ let dice = document.getElementById("dice");
+ let num = document.getElementById("number");
+ const rollbtn = document.getElementById("rollBtn");
+
+ rollbtn.addEventListener("click",()=>{
+    let ranVar =(Math.random()*6)+1;
+    let random = Math.floor(ranVar);
+    console.log(random)
+    num.innerText=random;
+   });
+ 
+
+
+
+
+
+</script>
+
+</body>
+
+</html>
